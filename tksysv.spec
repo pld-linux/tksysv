@@ -6,6 +6,7 @@ Release:	6
 License:	GPL
 Group:		X11/Applications/System
 Source0:	%{name}-%{version}.tar.gz
+# Source0-md5:	22976fdd9c1541e28fc3a988e93e7573
 Requires:	tcl tk chkconfig
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
