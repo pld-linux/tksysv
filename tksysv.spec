@@ -1,37 +1,53 @@
-Summary: An X editor for editing runlevel services.
-Name: tksysv
-Version: 1.0
-Release: 6
-Copyright: GPL
-Group: Applications/System
-Source: tksysv-1.0.tar.gz
-Requires: tcl tk chkconfig
-BuildArchitectures: noarch
+Summary:	An X editor for editing runlevel services
+Summary(pl):	Narzêdzie pod X do edycji serwisów uruchamianych przy starcie
+Name:		tksysv
+Version:	1.0
+Release:	6
+License:	GPL
+Group:		X11/Applications/System
+Group(de):	X11/Applikationen/System
+Group(pl):	X11/Aplikacje/System
+Source0:	%{name}-%{version}.tar.gz
+Requires:	tcl tk chkconfig
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_prefix		/usr/X11R6
+%define		_mandir		/usr/X11R6/man
+%define		_libdir		/usr/lib
+
 %description
-Tksysv is an X Window System based graphical interface for editing
-the services provided by different runlevels.  Tksysv is used to set
-which services are stopped and which services are started in the
-different runlevels on your system.
+Tksysv is an X Window System based graphical interface for editing the
+services provided by different runlevels. Tksysv is used to set which
+services are stopped and which services are started in the different
+runlevels on your system.
 
 Install the tksysv package if you'd like to use a graphical tool for
 editing runlevel services.
 
+%description -l pl
+Tksysv jest bazuj±cym na X Window System graficznym interfejsem do
+wyboru serwisów, które maj± byæ uruchamiane przy starcie w
+poszczególnych runlevelach.
+
 %prep
-%setup
+%setup -q
 
 %install
+rm -rf $RPM_BUILD_ROOT
 PREFIX=$RPM_BUILD_ROOT ./Install
+
+gzip -9nf CHANGELOG
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%doc CHANGELOG COPYING
-/usr/lib/tksysv
-/usr/X11R6/bin/tksysv
-/usr/lib/rhs/control-panel/tksysv.init
-/usr/lib/rhs/control-panel/tksysv.gif
-/usr/lib/rhs/control-panel/tksysv.xpm
-/usr/man/man8/tksysv.8
+%defattr(644,root,root,755)
+%doc CHANGELOG.gz
+%{_libdir}/tksysv
+%{_bindir}/tksysv
+%{_libdir}/rhs/control-panel/tksysv.init
+%{_libdir}/rhs/control-panel/tksysv.gif
+%{_libdir}/rhs/control-panel/tksysv.xpm
+%{_mandir}/man8/tksysv.8*
