@@ -35,14 +35,12 @@ poszczególnych runlevelach.
 rm -rf $RPM_BUILD_ROOT
 PREFIX=$RPM_BUILD_ROOT ./Install
 
-gzip -9nf CHANGELOG
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGELOG.gz
+%doc CHANGELOG
 %{_libdir}/tksysv
 %{_bindir}/tksysv
 %{_libdir}/rhs/control-panel/tksysv.init
