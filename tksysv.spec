@@ -5,8 +5,6 @@ Version:	1.0
 Release:	6
 License:	GPL
 Group:		X11/Applications/System
-Group(de):	X11/Applikationen/System
-Group(pl):	X11/Aplikacje/System
 Source0:	%{name}-%{version}.tar.gz
 Requires:	tcl tk chkconfig
 BuildArch:	noarch
