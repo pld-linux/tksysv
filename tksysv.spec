@@ -7,7 +7,7 @@ Group: Applications/System
 Source: tksysv-1.0.tar.gz
 Requires: tcl tk chkconfig
 BuildArchitectures: noarch
-Buildroot: /var/tmp/tksysv-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Tksysv is an X Window System based graphical interface for editing
