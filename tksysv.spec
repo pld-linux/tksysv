@@ -10,8 +10,6 @@ Requires:	tcl tk chkconfig
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		/usr/X11R6/man
 %define		_libdir		/usr/lib
 
 %description
