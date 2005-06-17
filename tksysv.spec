@@ -41,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGELOG
 %{_libdir}/tksysv
-%{_bindir}/tksysv
+%attr(755,root,root) %{_bindir}/tksysv
 %{_libdir}/rhs/control-panel/tksysv.init
 %{_libdir}/rhs/control-panel/tksysv.gif
 %{_libdir}/rhs/control-panel/tksysv.xpm
