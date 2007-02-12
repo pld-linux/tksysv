@@ -1,5 +1,5 @@
 Summary:	An X editor for editing runlevel services
-Summary(pl.UTF-8):   Narzędzie pod X do edycji serwisów uruchamianych przy starcie
+Summary(pl.UTF-8):	Narzędzie pod X do edycji serwisów uruchamianych przy starcie
 Name:		tksysv
 Version:	1.0
 Release:	6
