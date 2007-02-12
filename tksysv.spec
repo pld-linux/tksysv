@@ -1,5 +1,5 @@
 Summary:	An X editor for editing runlevel services
-Summary(pl):	Narzêdzie pod X do edycji serwisów uruchamianych przy starcie
+Summary(pl.UTF-8):   NarzÄ™dzie pod X do edycji serwisÃ³w uruchamianych przy starcie
 Name:		tksysv
 Version:	1.0
 Release:	6
@@ -22,10 +22,10 @@ runlevels on your system.
 Install the tksysv package if you'd like to use a graphical tool for
 editing runlevel services.
 
-%description -l pl
-Tksysv jest bazuj±cym na X Window System graficznym interfejsem do
-wyboru serwisów, które maj± byæ uruchamiane przy starcie w
-poszczególnych runlevelach.
+%description -l pl.UTF-8
+Tksysv jest bazujÄ…cym na X Window System graficznym interfejsem do
+wyboru serwisÃ³w, ktÃ³re majÄ… byÄ‡ uruchamiane przy starcie w
+poszczegÃ³lnych runlevelach.
 
 %prep
 %setup -q
